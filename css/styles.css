@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  font-family: 'Spartan', sans-serif;
+}
+
+body.fondo::before {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.247);
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.container {
+  width: 100%;
+}
+
+header {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+header .header-content {
+  background-image: url(../images/mobile-image-hero-1.jpg);
+  width: 100%;
+  height: 344px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 45px 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+header .header-content .hamburger {
+  cursor: pointer;
+  height: 20px;
+  z-index: 9999999;
+}
+
+header .header-content .hamburger .cerrar {
+  display: none;
+  z-index: 9999;
+}
+
+header .header-content .main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: white;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  padding: 50px 0 60px 0;
+  top: -100%;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  z-index: 9999;
+}
+
+header .header-content .main ul li {
+  list-style: none;
+  margin-right: 25px;
+}
+
+header .header-content .main ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .8rem;
+}
+
+header .header-content .arrows {
+  background: black;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 110px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-content .arrows img {
+  width: 10px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+header .header-hero {
+  width: 85%;
+  margin: 0 auto;
+}
+
+header .header-hero .hero .info-hero {
+  margin-top: 60px;
+}
+
+header .header-hero .hero .info-hero h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+header .header-hero .hero .info-hero p {
+  color: #a1a1a1;
+  font-size: .8rem;
+  line-height: 18px;
+  margin-bottom: 50px;
+}
+
+header .header-hero .hero .info-hero a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+header .header-hero .hero .info-hero img {
+  cursor: pointer;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+section .content-section img {
+  width: 100%;
+}
+
+section .content-section .text-section {
+  width: 85%;
+  margin: 50px auto;
+}
+
+section .content-section .text-section h2 {
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+section .content-section .text-section p {
+  color: #a1a1a1;
+  font-size: .8rem;
+  line-height: 18px;
+}
+/*# sourceMappingURL=styles.css.map */
