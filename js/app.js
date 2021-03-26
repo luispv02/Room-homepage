@@ -1,15 +1,16 @@
 let abrir = document.querySelector('.abrir')
 let cerrar = document.querySelector('.cerrar');
 
-
-let imagenes = ['images/mobile-image-hero-1.jpg', 'images/mobile-image-hero-2.jpg' , 'images/mobile-image-hero-3.jpg']
+let imagenesMobile = ['images/mobile-image-hero-1.jpg', 'images/mobile-image-hero-2.jpg' , 'images/mobile-image-hero-3.jpg']
+let imagenesDesktop = ['images/desktop-image-hero-1.jpg', 'images/desktop-image-hero-2.jpg' , 'images/desktop-image-hero-3.jpg']
 let cont = 0
 console.log(cont)
 function carrousel(contenedor){
     contenedor.addEventListener('click', (e) => {
         let atras = contenedor.querySelector('.atras');
         let adelante = contenedor.querySelector('.adelante');
-        let img = contenedor.querySelector('img');
+        let imgMobile = contenedor.querySelector('.mobile');
+        let imgDesktop = contenedor.querySelector('.desktop');
         let uno = document.querySelector('.one')
         let dos = document.querySelector('.two')
         let tres = document.querySelector('.three')
@@ -18,7 +19,8 @@ function carrousel(contenedor){
         
         if(e.target == atras){
             if(cont > 0){
-                img.src = imagenes[cont - 1];
+                imgMobile.src = imagenesMobile[cont - 1];
+                imgDesktop.src = imagenesDesktop[cont - 1];
                 cont--;
                 console.log(cont)
                 if(cont == 1){
@@ -29,18 +31,20 @@ function carrousel(contenedor){
                     uno.style.display = 'block'
                 }
             }else{
-                img.src = imagenes[imagenes.length - 1];
-                cont = imagenes.length - 1;
+                imgMobile.src = imagenesMobile[imagenesMobile.length - 1];
+                imgDesktop.src = imagenesDesktop[imagenesDesktop.length - 1];
+                cont = imagenesMobile.length - 1;
                 console.log(cont)
                 if(cont == 2){
                     uno.style.display = 'none'
                     tres.style.display = 'block'
                 }
             }
-               
+            
         }else if(e.target == adelante){
-            if(cont < imagenes.length - 1){
-                img.src = imagenes[cont + 1];
+            if(cont < imagenesMobile.length - 1){
+                imgMobile.src = imagenesMobile[cont + 1];
+                imgDesktop.src = imagenesDesktop[cont + 1];
                 cont++;
                 console.log(cont)
                 if(cont == 1){
@@ -51,7 +55,8 @@ function carrousel(contenedor){
                     tres.style.display = 'block'
                 }
             }else{
-                img.src = imagenes[0];
+                imgMobile.src = imagenesMobile[0];
+                imgDesktop.src = imagenesDesktop[0];
                 cont = 0;
                 console.log(cont)
                 if(cont == 0){
@@ -78,7 +83,6 @@ cerrar.addEventListener('click', () => {
         abrir.style.display = 'block';
         cerrar.style.display = 'none'
         body.classList.remove('fondo')
-        body.style.overflow = 'visible'
     }
 })
 
@@ -90,6 +94,5 @@ abrir.addEventListener('click', () => {
         abrir.style.display = 'none';
         cerrar.style.display = 'block'
         body.classList.add('fondo')
-        body.style.overflow = 'hidden'
     }
 })

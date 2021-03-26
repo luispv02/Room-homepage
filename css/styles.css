@@ -13,7 +13,7 @@ body {
 body.fondo::before {
   content: '';
   position: absolute;
-  background: rgba(0, 0, 0, 0.247);
+  background: rgba(0, 0, 0, 0.39);
   width: 100%;
   height: 100%;
   z-index: 99;
@@ -30,6 +30,10 @@ header {
 
 header > img {
   width: 100%;
+}
+
+header img.desktop {
+  display: none;
 }
 
 header .header-content {
@@ -92,6 +96,13 @@ header .header-content .hamburger img.cerrar {
 .main ul li a {
   color: black;
   text-decoration: none;
+  font-weight: 700;
+  text-transform: lowercase;
+  padding-bottom: 7px;
+}
+
+.main ul li a:hover {
+  border-bottom: 2px solid white;
 }
 
 .header-content .logo {
@@ -121,7 +132,7 @@ header .header-content .hamburger img.cerrar {
 
 .flechas img.atras:hover,
 .flechas img.adelante:hover {
-  background: rgba(80, 80, 80, 0.295);
+  background: rgba(107, 107, 107, 0.411);
 }
 
 .header-hero {
@@ -189,5 +200,92 @@ section .content-section .text-section p {
   color: #a1a1a1;
   font-size: .8rem;
   line-height: 18px;
+}
+
+@media (min-width: 1024px) {
+  header {
+    position: initial;
+  }
+  .header-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+  header .mobile {
+    display: none;
+  }
+  header img.desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .header-content .flechas {
+    right: 30.3%;
+    bottom: -5px;
+  }
+  .flechas img {
+    padding: 22px 40px;
+  }
+  .header-flex .header-hero {
+    margin: 20px auto 0 auto;
+    width: 70%;
+    padding: 0 80px 0 80px;
+  }
+  .header-hero .hero .info-hero h2 {
+    font-size: 2rem;
+  }
+  .header-hero .hero .info-hero p {
+    height: 100px;
+  }
+  .header-content .logo {
+    position: initial;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    top: 20px;
+    margin-top: 40px;
+    margin-left: 50px;
+  }
+  .header-content .logo img {
+    width: 68px;
+  }
+  .hamburger {
+    display: none;
+  }
+  .main {
+    position: absolute;
+    left: 180px;
+  }
+  .main ul {
+    position: initial;
+    background: none;
+  }
+  .main ul li a {
+    color: white;
+    font-size: .8rem;
+  }
+  section {
+    margin-bottom: 0;
+  }
+  .content-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section .content-section img {
+    width: 410px;
+  }
+  section .content-section .text-section {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header-content .flechas {
+    right: 28.3%;
+  }
+  .flechas img {
+    padding: 26px 50px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
